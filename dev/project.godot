@@ -30,29 +30,8 @@ file_logging/enable_file_logging=true
 
 [dialogic]
 
-directories/dch_directory={
-"soniaCharacter": "res://ui/dialogue/soniaCharacter.dch",
-"teacherCharacter": "res://ui/dialogue/teacherCharacter.dch"
-}
-directories/dtl_directory={
-"AmphiDoor": "res://assets/props/campus/AmphiDoor.dtl",
-"Bath": "res://assets/props/bedroom/Bath.dtl",
-"Bed": "res://assets/props/bedroom/Bed.dtl",
-"CampusIntroduction": "res://maps/CampusIntroduction.dtl",
-"CityIntroduction": "res://maps/CityIntroduction.dtl",
-"Closet": "res://assets/props/bedroom/Closet.dtl",
-"DestinationChoice": "res://assets/props/DestinationChoice.dtl",
-"Door": "res://assets/props/bedroom/Door.dtl",
-"ExitDoor": "res://assets/props/ExitDoor.dtl",
-"FlatDoor": "res://assets/props/city/FlatDoor.dtl",
-"Fridge": "res://assets/props/bedroom/Fridge.dtl",
-"HiddenMission": "res://assets/props/bedroom/HiddenMission.dtl",
-"Radiator": "res://assets/props/bedroom/Radiator.dtl",
-"Shower": "res://assets/props/bedroom/Shower.dtl",
-"StageMic": "res://assets/props/amphitheater/StageMic.dtl",
-"TeacherQCM": "res://assets/props/amphitheater/TeacherQCM.dtl",
-"Tutorial": "res://game/tutorial/Tutorial.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_list=["res://ui/dialogue/basicStyle.tres", "res://ui/dialogue/portraitStyle.tres"]
 layout/default_style="res://ui/dialogue/basicStyle.tres"
 glossary/default_case_sensitive=true
@@ -137,7 +116,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/character_creator_tool_importer/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/json_library/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gdUnit4/plugin.cfg", "res://addons/json_library/plugin.cfg")
 
 [filesystem]
 
