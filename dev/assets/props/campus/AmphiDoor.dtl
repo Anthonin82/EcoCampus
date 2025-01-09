@@ -1,0 +1,4 @@
+Voulez vous rentrer dans l'amphithéâtre ?
+- Rentrer
+	set {campus.amphiTeleport} = true
+- Continuer

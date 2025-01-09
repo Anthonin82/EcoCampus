@@ -1,0 +1,64 @@
+if {tutorial.stepFourDone} == true:
+	do PlayerGlobals.setPlayerAnimation("idle_down")
+	jump Step5
+if {tutorial.stepThreeDone} == true:
+	do PlayerGlobals.setPlayerAnimation("idle_down")
+	jump Step4
+if {tutorial.stepTwoDone} == true:
+	jump Step3
+if {tutorial.stepOneDone} == true:
+	do PlayerGlobals.setPlayerAnimation("idle_down")
+	jump Step2
+soniaCharacter (default): Bonjour et bienvenue dans [wave][color=green]{Dialogic.VAR.tutorial.gameName}[/color][/wave]. Je suis [b]Sonia[/b], votre guide pour cette expérience !\
+\
+\
+\
+[pulse](Cliquer pour avancer)[/pulse]
+soniaCharacter (speak): Dans [color=green]{Dialogic.VAR.tutorial.gameName}[/color], l'objectif est de réaliser une journée typique d'un étudiant en faisant les meilleurs choix pour l'environnement.\
+\
+\
+[pulse](Cliquer pour avancer)[/pulse]
+soniaCharacter (default): Vous allez être amenés à réaliser des missions pour progresser dans le jeu. À la fin de chaque chapitre, un compte rendu vous sera présenté pour vous faire part des meilleures et pires actions que vous avez réalisées.\
+\
+[pulse](Cliquer pour avancer)[/pulse]
+soniaCharacter (smileEyesClosed): Mais avant cela, apprenons ensemble à nous déplacer et interagir avec l'environnement !
+soniaCharacter (speak): Pour se déplacer il faut utiliser les touches '[b][color=orange]Z[/color][/b]', '[b][color=orange]Q[/color][/b]', '[b][color=orange]S[/color][/b]' et '[b][color=orange]D[/color][/b]' ! \
+'[b][color=orange]Z[/color][/b]' pour aller vers le [b]haut[/b],\
+'[b][color=orange]Q[/color][/b]' pour aller à [b]gauche[/b],\
+'[b][color=orange]S[/color][/b]' pour [b]reculer[/b], \
+'[b][color=orange]D[/color][/b]' pour aller vers le [b]bas[/b].
+soniaCharacter (smileEyesClosed): A vous de jouer, essayez de vous déplacer !
+set {tutorial.introductionDone} = true
+do PlayerGlobals.setPlayerCanMove(true)
+label Step2
+if {tutorial.stepOneDone} == true:
+	soniaCharacter (smileEyesClosed): Bien joué ! Vous savez à présent vous balader librement dans le monde.
+	soniaCharacter (default): Apprenons maintenant à [b]Interagir[/b] avec l'environnement !
+	soniaCharacter (speak): Pour cela rapprochez vous de la chaise en bois de droite jusqu'à ce qu'elle soit entourée d'une ligne blanche, puis appuyez sur la touche '[b][color=orange]E[/color][/b]'.
+label Step3
+if {tutorial.stepTwoDone} == true:
+	soniaCharacter (smileEyesClosed): Bien joué ! Vous avez réussi votre première interaction avec un objet du décor. Pour sortir de la chaise, vous pouvez à nouveau appuyer sur la touche '[b][color=orange]E[/color][/b]'.
+	soniaCharacter (default): Tout au long de votre partie, les objets avec lesquels vous pouvez interagir seront entourés en blanc.
+	soniaCharacter (smileEyesClosed): Passons maintenant à la découverte de l'[wave][b][color=gold]Inventaire[/color][/b][/wave] !
+	soniaCharacter (speak): Pendant la partie vous serez libre de ramasser certains objets qui pourront vous servir ou non par la suite. Ils seront rangés dans votre inventaire une fois ramassés.
+	soniaCharacter (default): L'inventaire est composé de deux parties. La partie '[b][color=gold]Inventaire[/color][/b]' et la partie '[b][color=dodgerblue]Archivés[/color][/b]'.
+	soniaCharacter (speak): La partie '[b][color=gold]Inventaire[/color][/b]' est la section où tous vos objets se retrouveront par défaut. \
+Tandis que la partie '[b][color=dodgerblue]Archivés[/color][/b]' est l'endroit où vos objets se retrouveront une fois que vous les avez utilisé.
+	soniaCharacter: Comme [color=green]{Dialogic.VAR.tutorial.gameName}[/color] vous laisse la possibilité de réessayer les chapitres du jeu pour améliorer votre score, vous pourrez toujours utiliser les objets qui sont archivés.
+	soniaCharacter (default): Trêve de bavardage, à vous de découvrir cet inventaire en appuyant sur la touche '[b][color=orange]F[/color][/b]' après être sorti de la chaise (touche '[b][color=orange]E[/color][/b]'). Puis de nouveau '[b][color=orange]F[/color][/b]' pour sortir de l'inventaire une fois que vous avez fini votre inspection.
+label Step4
+if {tutorial.stepThreeDone} == true:
+	soniaCharacter (smileEyesClosed): Félicitations, vous venez de découvrir l'[b][color=gold]Inventaire[/color][/b] !
+	soniaCharacter (default): Comme vous avez pu le remarquer c'est bien vide pour le moment. Pas de panique vous aurez l'occasion de le remplir plus tard en réalisant vos [wave][b][color=deeppink]Missions[/color][/b][/wave] !
+	soniaCharacter (smileEyesClosed): En parlant de [b][color=deeppink]Missions[/color][/b], je ne sais pas si vous aviez remarqué mais en haut à gauche de votre écran se trouve la mission actuelle à réaliser pour avancer dans le jeu.
+	soniaCharacter (speak): Il s'agit de la mission tutoriel dont je suis en charge ! Pour la réussir il faut accomplir toutes les tâches que je vous donne.
+	soniaCharacter (default): Voici donc ma dernière tâche pour valider la mission '[b]Tutoriel[/b]' !
+	soniaCharacter (calm): La dernière chose que je voulais vous faire découvrir étant le menu des [wave][b][color=crimson]Options[/color][/b][/wave] ! Celui-ci vous permettra de changer de nombreux réglages pour améliorer votre expérience de jeu.
+	soniaCharacter (speak): Comme notamment les touches par défaut que je vous ai apprises à l'instant. Si elles ne vous conviennent pas, vous pouvez les changer à votre guise.
+	soniaCharacter (default): Pour ce faire il faut appuyer sur la touche '[b][color=orange]Echap[/color][/b]' située en haut à gauche de votre clavier. A vous de jouer !
+label Step5
+if {tutorial.stepFourDone} == true:
+	soniaCharacter (smileEyesClosed): Félicitations, vous avez maintenant terminé le tutoriel !
+	soniaCharacter (speak): Comme vous avez pu le voir, la mission '[b]Tutoriel[/b]' est passée en [color=green]vert[/color] pour indiquer qu'elle est terminée. Les [b][color=deeppink]Missions[/color][/b] qui apparaissent en haut à gauche sont obligatoires pour avancer dans le jeu.
+	soniaCharacter (default): Vous êtes à présent fin prêt pour vous aventurer dans le monde d'[color=green]{Dialogic.VAR.tutorial.gameName}[/color]. J'espère que vous vous amuserez tout en apprenant des gestes ou des idées à mettre en place pour devenir plus [b]eco-responsable[/b] !
+	soniaCharacter (smileEyesClosed): Bonne chance !

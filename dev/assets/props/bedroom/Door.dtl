@@ -1,0 +1,7 @@
+if {bedroom.completed} == true:
+	Voulez vous sortir de l'appartment ?
+	- Aller en ville
+		set {bedroom.teleport} = true
+	- Continuer
+else:
+	Vous devez vous laver et manger pour pouvoir sortir.

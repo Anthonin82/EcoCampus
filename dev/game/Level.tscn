@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bev6spb7ln5hh"]
+
+[ext_resource type="Script" path="res://game/Level.gd" id="1_k77ye"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_k77ye")
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CompulsoryMissions" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="OptionalMissions" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2

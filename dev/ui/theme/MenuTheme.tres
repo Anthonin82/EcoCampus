@@ -1,0 +1,122 @@
+[gd_resource type="Theme" load_steps=31 format=3 uid="uid://bqjc8d6oo4wit"]
+
+[ext_resource type="FontFile" uid="uid://cd176iwpx5nnv" path="res://ui/fonts/PixelifySans-VariableFont_wght.ttf" id="1_ba30v"]
+[ext_resource type="Texture2D" uid="uid://b763r7t4duw1n" path="res://ui/theme/asset/empty2.png" id="2_a8bxx"]
+[ext_resource type="Texture2D" uid="uid://dbpl5xrobegjw" path="res://ui/theme/asset/empty1.png" id="2_nnf7q"]
+[ext_resource type="Texture2D" uid="uid://d28ytd2h2salb" path="res://ui/theme/asset/empty3.png" id="2_sdf7l"]
+[ext_resource type="Texture2D" uid="uid://dnjlpfj2otoud" path="res://ui/theme/asset/yes1.png" id="3_y0qtl"]
+[ext_resource type="Texture2D" uid="uid://bl1fsb057efi7" path="res://ui/theme/asset/checkbutton_checked.png" id="4_8rv8x"]
+[ext_resource type="Texture2D" uid="uid://bfbvmy1jo8ahm" path="res://ui/theme/asset/checkbutton_checked_disable.png" id="5_4oh5b"]
+[ext_resource type="Texture2D" uid="uid://jjl6a0dh4wii" path="res://ui/theme/asset/checkbutton_unchecked.png" id="6_bw4y7"]
+[ext_resource type="Texture2D" uid="uid://d1o2srd7fayeq" path="res://ui/theme/asset/checkbutton_unchecked_disable.png" id="7_g8q7t"]
+[ext_resource type="Texture2D" uid="uid://bwluf057aeg0i" path="res://ui/theme/asset/window.png" id="8_72hau"]
+[ext_resource type="Texture2D" uid="uid://b0wr1s0vwsy14" path="res://ui/theme/asset/gobelet2.png" id="9_88w8m"]
+[ext_resource type="Texture2D" uid="uid://daq0scpy7qejt" path="res://ui/theme/asset/gobelet1.png" id="10_4ak8j"]
+[ext_resource type="Texture2D" uid="uid://bhjndwltnhldp" path="res://ui/theme/asset/gobelet3.png" id="11_4akdq"]
+[ext_resource type="Texture2D" uid="uid://b5jgb5pvj6j5p" path="res://ui/theme/asset/question2.png" id="13_7pgti"]
+[ext_resource type="Texture2D" uid="uid://c3etjjb1qboij" path="res://ui/theme/asset/question1.png" id="14_bbary"]
+[ext_resource type="Texture2D" uid="uid://dbicfsqilbk0d" path="res://ui/theme/asset/question3.png" id="15_6ld7p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l5idd"]
+texture = ExtResource("2_a8bxx")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lj8lw"]
+texture = ExtResource("2_nnf7q")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yyy8m"]
+texture = ExtResource("2_sdf7l")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35b37"]
+texture = ExtResource("2_a8bxx")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4a1ox"]
+texture = ExtResource("2_sdf7l")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a3u4t"]
+texture = ExtResource("2_nnf7q")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dfwd3"]
+texture = ExtResource("2_sdf7l")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tir3c"]
+texture = ExtResource("9_88w8m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fp2p"]
+texture = ExtResource("10_4ak8j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trsch"]
+texture = ExtResource("11_4akdq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_inmd0"]
+texture = ExtResource("8_72hau")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+modulate_color = Color(0.498039, 0.498039, 0.498039, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gt3yt"]
+texture = ExtResource("13_7pgti")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4yak7"]
+texture = ExtResource("14_bbary")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0monp"]
+texture = ExtResource("15_6ld7p")
+
+[resource]
+default_font = ExtResource("1_ba30v")
+default_font_size = 24
+Button/fonts/font = ExtResource("1_ba30v")
+Button/styles/hover = SubResource("StyleBoxTexture_l5idd")
+Button/styles/normal = SubResource("StyleBoxTexture_lj8lw")
+Button/styles/pressed = SubResource("StyleBoxTexture_yyy8m")
+CheckBox/fonts/font = ExtResource("1_ba30v")
+CheckBox/icons/checked = ExtResource("3_y0qtl")
+CheckBox/icons/checked_disabled = ExtResource("3_y0qtl")
+CheckButton/icons/checked = ExtResource("4_8rv8x")
+CheckButton/icons/checked_disabled = ExtResource("5_4oh5b")
+CheckButton/icons/unchecked = ExtResource("6_bw4y7")
+CheckButton/icons/unchecked_disabled = ExtResource("7_g8q7t")
+CheckButton/styles/hover = SubResource("StyleBoxTexture_35b37")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxTexture_4a1ox")
+CheckButton/styles/normal = SubResource("StyleBoxTexture_a3u4t")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_dfwd3")
+GobeletButton/base_type = &"Button"
+GobeletButton/styles/hover = SubResource("StyleBoxTexture_tir3c")
+GobeletButton/styles/normal = SubResource("StyleBoxTexture_3fp2p")
+GobeletButton/styles/pressed = SubResource("StyleBoxTexture_trsch")
+Label/fonts/font = ExtResource("1_ba30v")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_inmd0")
+QuestionButton/base_type = &"Button"
+QuestionButton/styles/hover = SubResource("StyleBoxTexture_gt3yt")
+QuestionButton/styles/normal = SubResource("StyleBoxTexture_4yak7")
+QuestionButton/styles/pressed = SubResource("StyleBoxTexture_0monp")

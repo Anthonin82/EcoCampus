@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwup1d7y4nf6r"]
+
+[ext_resource type="PackedScene" uid="uid://bv1p3ho4637q7" path="res://player/Player.tscn" id="1_q6cqm"]
+[ext_resource type="Script" path="res://maps/DressingRoom.gd" id="2_blp7y"]
+[ext_resource type="Theme" uid="uid://bqjc8d6oo4wit" path="res://ui/theme/MenuTheme.tres" id="2_e3ouf"]
+[ext_resource type="PackedScene" uid="uid://ca130cmcjod2v" path="res://maps/Bedroom.tscn" id="3_br5ul"]
+[ext_resource type="Texture2D" uid="uid://bjhv6ioec1yol" path="res://ui/images/dressingRoomBG.png" id="3_yab0g"]
+
+[node name="DressingRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_e3ouf")
+script = ExtResource("2_blp7y")
+bedroomScene = ExtResource("3_br5ul")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_e3ouf")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -966.0
+offset_top = -756.0
+offset_right = 966.0
+offset_bottom = 596.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_yab0g")
+
+[node name="leftArrowBtn" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -530.0
+offset_top = 80.0
+offset_right = -290.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "<"
+
+[node name="rightArrowBtn" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 288.0
+offset_top = 80.0
+offset_right = 528.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = ">"
+
+[node name="playBtn" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 223.0
+offset_right = 125.0
+offset_bottom = 332.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "PLAY"
+
+[node name="Player" parent="Panel" instance=ExtResource("1_q6cqm")]
+unique_name_in_owner = true
+position = Vector2(960, 960)
+scale = Vector2(25, 25)
+
+[connection signal="pressed" from="Panel/leftArrowBtn" to="." method="_on_left_arrow_btn_pressed"]
+[connection signal="pressed" from="Panel/rightArrowBtn" to="." method="_on_right_arrow_btn_pressed"]
+[connection signal="pressed" from="Panel/playBtn" to="." method="_on_play_btn_pressed"]

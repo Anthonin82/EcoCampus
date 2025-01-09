@@ -1,0 +1,41 @@
+[gd_scene load_steps=20 format=3 uid="uid://bv1p3ho4637q7"]
+
+[ext_resource type="Script" path="res://player/Player.gd" id="1_lens1"]
+[ext_resource type="PackedScene" uid="uid://biv7myiq28rf5" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM1.tscn" id="2_sy7id"]
+[ext_resource type="PackedScene" uid="uid://mcyrx4vmytbx" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM2.tscn" id="3_ykd0m"]
+[ext_resource type="PackedScene" uid="uid://bdt1wriqauop2" path="res://assets/characters/character_generator/female/animatedSprites/animatedSpriteF1.tscn" id="4_k6osc"]
+[ext_resource type="PackedScene" uid="uid://ir58rgmsgv8a" path="res://assets/characters/character_generator/female/animatedSprites/animatedSpriteF2.tscn" id="5_nb8eu"]
+[ext_resource type="Resource" uid="uid://jmkcjflec312" path="res://inventory/playerInventory.tres" id="6_ave4b"]
+[ext_resource type="PackedScene" uid="uid://c7ihufo2ovckc" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM3.tscn" id="6_d24sd"]
+[ext_resource type="PackedScene" uid="uid://b1x14bqhrby3s" path="res://assets/characters/character_generator/female/animatedSprites/animatedSpriteF3.tscn" id="7_jkpu4"]
+[ext_resource type="PackedScene" uid="uid://bwl1wml7xel0o" path="res://assets/characters/character_generator/female/animatedSprites/animatedSpriteF4.tscn" id="8_cl6yj"]
+[ext_resource type="PackedScene" uid="uid://bm0dbosjliw3s" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM4.tscn" id="9_f2hnp"]
+[ext_resource type="PackedScene" uid="uid://dangusjq6lx6w" path="res://assets/characters/character_generator/female/animatedSprites/animatedSpriteF5.tscn" id="10_nvjnu"]
+[ext_resource type="PackedScene" uid="uid://jxl2f84jact1" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM5.tscn" id="11_xa6kd"]
+[ext_resource type="PackedScene" uid="uid://qmqdobv6j0hm" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM6.tscn" id="12_hg3dw"]
+[ext_resource type="PackedScene" uid="uid://lriyygjhnq8g" path="res://assets/characters/character_generator/female/animatedSprites/animatedSpriteF6.tscn" id="13_2vvyr"]
+[ext_resource type="PackedScene" uid="uid://qierwjrq5v1" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteAndy.tscn" id="14_soo0t"]
+[ext_resource type="PackedScene" uid="uid://7f3dl3jctigg" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteBaptiste.tscn" id="15_7ux3g"]
+[ext_resource type="PackedScene" uid="uid://cthw2gi2ktqaa" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteEnzo.tscn" id="16_bb02p"]
+[ext_resource type="PackedScene" uid="uid://cveheix3rqbil" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteFelipe.tscn" id="17_ywutf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2dgmv"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_lens1")
+skinScenes = Array[PackedScene]([ExtResource("2_sy7id"), ExtResource("3_ykd0m"), ExtResource("4_k6osc"), ExtResource("5_nb8eu"), ExtResource("6_d24sd"), ExtResource("7_jkpu4"), ExtResource("8_cl6yj"), ExtResource("9_f2hnp"), ExtResource("10_nvjnu"), ExtResource("11_xa6kd"), ExtResource("12_hg3dw"), ExtResource("13_2vvyr"), ExtResource("14_soo0t"), ExtResource("15_7ux3g"), ExtResource("17_ywutf"), ExtResource("16_bb02p")])
+inventory = ExtResource("6_ave4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_2dgmv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -10)
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true

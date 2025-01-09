@@ -1,0 +1,7 @@
+if {amphi.completed} == true:
+	Voulez vous sortir ?
+	- Sortir
+		set {amphi.exit} = true
+	- Continuer
+else:
+	Il faut réaliser toutes les missions de [wave][b][color=dodgerblue]l'Amphithéâtre[/color][/b][/wave] pour pouvoir sortir du cours !

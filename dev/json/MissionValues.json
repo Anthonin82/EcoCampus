@@ -1,0 +1,182 @@
+{
+	"genericValues": {
+
+	},
+	"missions": {
+		"bedroom": {
+			"tuto": {
+				"missionName": "Tutoriel",
+				"missionDescription": "Compléter tous les exercices donnés par Sonia.",
+				"missionAdvancedDescription": "",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {
+
+				},
+				"timePerWeek": 0,
+				"goodActionBeneath": {
+					"KGCO2E": 0
+				}
+			},
+			"breakfast": {
+				"missionName": "Prendre son petit déjeuner",
+				"missionDescription": "Conservez un repas équilibré en évitant la viande.",
+				"missionAdvancedDescription": "Parmi les choix proposés, ceux qui émettent le moins de carbone est le petit déjeuner [b]Continental[/b] avec [b]0.25 KgCO2e[/b].\nA l'inverse, le petit déjeuner [b]Britannique[/b] est le plus polluant avec [b]1.18 KgCO2e[/b].\nEt comme ce dernier est composé de viande, il faut noter que l’organisation des Nations unies pour l’alimentation et l’agriculture (FAO) souligne que l’élevage est à l’origine de [b]12 %[/b] des émissions de gaz à effet de serre causées par l’homme. \n\n Source: [color=blue][url=https://nosgestesclimat.fr]Nos gestes climat[/url][/color]",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {
+					"continental": {
+						"choiceName": "Continental",
+						"KGCO2E": 0.28
+					},
+					"britannique": {
+						"choiceName": "Britannique",
+						"KGCO2E": 1.18
+					},
+					"cow_milk_cereales": {
+						"choiceName": "Lait de vache et céréales",
+						"KGCO2E": 0.46
+					},
+					"vegetalien": {
+						"choiceName": "Végétalien",
+						"KGCO2E": 0.38
+					}
+				},
+				"timePerWeek": 7,
+				"goodActionBeneath": {
+					"KGCO2E": 0.4
+				}
+			},
+			"radiator": {
+				"missionName": "Baisser la température d'un degré",
+				"missionDescription": "[wave][color=gold]Mission cachée[/color][/wave]",
+				"missionAdvancedDescription": "On dirait que vous venez de découvrir votre première [wave][b][color=gold]mission cachée[/color][/b][/wave]!\n En effet tous les gestes que vous pouvez faire pour améliorer votre empreinte carbonne ne seront pas obligatoires pour avancer dans le jeu. Alors n'hésitez pas à explorer ! \n\nBaisser le chauffage d'un degré permet d'économiser [color=green]7%[/color] d'énergie, mais aussi [color=green]7%[/color]  sur votre facture d'électricité ! \n\n Source: [color=blue][url=https://presse.ademe.fr/2022/09/comment-les-entreprises-peuvent-se-mobiliser-pour-la-sobriete-et-lefficacite-energetique.html]ADEME[/url][/color]",
+				"compulsory": "OPTIONAL",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {
+					"radiatorNormal": {
+						"choiceName": "Laisser le radiateur allumé",
+						"KGCO2E": 1809.45
+					},
+					"radiatorLessOneDegree": {
+						"choiceName": "Radiateur baissé de 1 degré",
+						"KGCO2E": 1682.7885,
+						"method": "1809.45-1809.45*0.07"
+					}
+				},
+				"timePerYear": 1,
+				"goodActionBeneath": {
+					"KGCO2E": 1800
+				}
+			},
+			"wash": {
+				"missionName": "Se laver",
+				"missionDescription": "La douche est beaucoup plus économique que la bainoire.",
+				"missionAdvancedDescription": "Si vous voulez économiser de l'eau pour vous laver, la meilleure solution est évidemment la [b]douche[/]. On a une consommation d'environ [b]70 Litres d'eau[/b], contre entre [b]150 et 200 Litres[/b] pour le [b]bain[/b]! \n\n Source: [color=blue][url=https://www.kelwatt.fr/eau/consommation/douche]Kelwatt[/url][/color]",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"L"
+				],
+				"choices": {
+					"shower": {
+						"choiceName": "Prendre une douche",
+						"L": 70
+					},
+					"bath": {
+						"choiceName": "Prendre un bain",
+						"L": 150
+					}
+				},
+				"timePerWeek": 4,
+				"goodActionBeneath": {
+					"L": 100
+				}
+			}
+		},
+		"city": {
+			"goToCampus": {
+				"missionName": "Se rendre au Campus",
+				"missionDescription": "Pour être écologique, la meilleure façon de se déplacer en ville est soit à pied soit en vélo.",
+				"missionAdvancedDescription": "Pour être écologique, la meilleure façon de se déplacer en ville est soit à pied soit en vélo. Mais généralement ils sont pour de courts trajets. Pour les trajets plus longs, le bus et le métro sont les moins polluants. Par contre, utiliser la voiture est la moins bonne solution, surtout si cette dernière n’est pas électrique, car elle présente environ 60% des émissions à effets de serre dans le cadre du transport dans l’UE en 2019. Pour ceux qui préfèrent quand même la voiture, il est conseillé de faire du covoiturage, car ce dernier divise l'impact par le nombre de passagers. \n\n Sources: [color=blue][url=https://www.europarl.europa.eu/topics/fr/article/20190313STO31218/emissions-de-co2-des-voitures-faits-et-chiffres-infographie]Europarl[/url][/color], [color=blue][url=https://impactco2.fr/outils/transport]Impact Co2[/url][/color]",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {
+					"car": {
+						"choiceName": "Prendre la voiture",
+						"KGCO2E": 2.18
+					},
+					"bus": {
+						"choiceName": "Prendre le bus",
+						"KGCO2E": 0.22
+					},
+					"subway": {
+						"choiceName": "Prendre le métro",
+						"KGCO2E": 0.04
+					},
+					"walkOrBike": {
+						"choiceName": "Marcher ou prendre le vélo",
+						"KGCO2E": 0
+					}
+				},
+				"timePerWeek": 10,
+				"goodActionBeneath": {
+					"KGCO2E": 0.25
+				}
+			}
+		},
+		"campus": {
+			"goToAmphi": {
+				"missionName": "Assister à un cours",
+				"missionDescription": "Vous vous êtes rendu en cours !",
+				"missionAdvancedDescription": "Dépendant de votre choix de transport, vous avez émis plus ou moins de CO2. La meilleure solution est de marcher ou de prendre le vélo, car cela ne produit pas de CO2. \n\n Source: [color=blue][url=https://impactco2.fr/outils/transport]Impact Co2[/url][/color]",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {},
+				"timePerWeek": 0,
+				"goodActionBeneath": {
+					"KGCO2E": 0
+				}
+			}
+		},
+		"amphitheater": {
+			"doMCQ": {
+				"missionName": "Faire le QCM",
+				"missionDescription": "Vous avez fait le QCM de Mme Verdure !",
+				"missionAdvancedDescription": "",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {},
+				"timePerWeek": 0,
+				"goodActionBeneath": {
+					"KGCO2E": 0
+				}
+			},
+			"stageSpeech": {
+				"missionName": "Sensibiliser ses camarades",
+				"missionDescription": "Vous avez partagé vos connaissances sur la transition écologique avec vos camarades !",
+				"missionAdvancedDescription": "",
+				"compulsory": "COMPULSORY",
+				"consumptionType": [
+					"KGCO2E"
+				],
+				"choices": {},
+				"timePerWeek": 0,
+				"goodActionBeneath": {
+					"KGCO2E": 0
+				}
+			}
+		}
+	}
+}

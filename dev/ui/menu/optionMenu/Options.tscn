@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://beisq1odcunu4"]
+
+[ext_resource type="Script" path="res://ui/menu/optionMenu/Options.gd" id="1_y503b"]
+[ext_resource type="PackedScene" uid="uid://cdrb2f4jkvai1" path="res://ui/menu/optionMenu/KeybindingOptions.tscn" id="2_225aw"]
+[ext_resource type="PackedScene" uid="uid://ccxo53q5u72xb" path="res://ui/menu/optionMenu/BugReport.tscn" id="3_vxspw"]
+[ext_resource type="PackedScene" uid="uid://0i0ulsjxjknm" path="res://ui/menu/optionMenu/GraphicalOptions.tscn" id="4_r5k4e"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_y503b")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+current_tab = 0
+
+[node name="Touches clavier" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Control" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer/TabContainer/Touches clavier"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InputList" parent="MarginContainer/PanelContainer/VBoxContainer/TabContainer/Touches clavier" instance=ExtResource("2_225aw")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer/TabContainer/Touches clavier"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Signaler un bug" parent="MarginContainer/PanelContainer/VBoxContainer/TabContainer" instance=ExtResource("3_vxspw")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Options graphiques" parent="MarginContainer/PanelContainer/VBoxContainer/TabContainer" instance=ExtResource("4_r5k4e")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Control" type="Control" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="closeButton" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+text = "Fermer"
+
+[node name="quitButton" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+text = "Quitter le jeu"
+
+[node name="deleteSaveButton" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+text = "Supprimer la sauvegarde"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/CenterContainer/HBoxContainer/closeButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/CenterContainer/HBoxContainer/quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/CenterContainer/HBoxContainer/deleteSaveButton" to="." method="_on_delete_save_button_pressed"]

@@ -1,0 +1,110 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"description": "",
+	"type": "object",
+	"properties": {
+		"genericValues": {
+			"type": "object",
+			"properties": {}
+		},
+		"missions": {
+			"type": "object",
+			"properties": {
+				"*": {
+					"type": "object",
+					"properties": {
+						"*": {
+							"type": "object",
+							"properties": {
+								"missionName": {
+									"type": "string"
+								},
+								"missionDescription": {
+									"type": "string"
+								},
+								"missionAdvancedDescription": {
+									"type": "string"
+								},
+								"compulsory": {
+									"type": "string",
+									"enum" : ["COMPULSORY", "OPTIONAL"]
+								},
+								"consumptionType" : {
+									"type" : "array",
+									"items" : {
+										"type" : "string",
+										"enum" : ["KGCO2E", "L"]
+									}
+								},
+								"choices": {
+									"type": "object",
+									"properties": {
+										"*": {
+											"type": "object",
+											"properties": {
+												"choiceName": {
+													"type": "string"
+												},
+												"KGCO2E": {
+													"type": "number"
+												},
+												"L": {
+													"type": "number"
+												}
+											},
+											"required": [
+												"choiceName"
+											],
+											"anyOf": [
+												{"required": ["KGCO2E"]},
+												{"required": ["L"]}
+											]
+										}
+									}
+								},
+								"timePerWeek": {
+									"type": "number"
+								},
+								"timePerYear": {
+									"type": "number"
+								},
+								"goodActionBeneath": {
+									"type": "object",
+									"properties": {
+										"kgCO2e": {
+											"type": "number"
+										},
+										"L": {
+											"type": "number"
+										}
+									},
+									"anyOf": [
+										{"required": ["KGCO2E"]},
+										{"required": ["L"]}
+									]
+								}
+							},
+							"required": [
+								"missionName",
+								"missionDescription",
+								"missionAdvancedDescription",
+								"compulsory",
+								"consumptionType",
+								"choices",
+								"goodActionBeneath"
+							],
+							"anyOf": [
+								{"required": ["timePerWeek"]},
+								{"required": ["timePerYear"]}
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"required": [
+		"genericValues",
+		"missions"
+	]
+}

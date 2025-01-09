@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cid4gfn7dbnq7"]
+
+[ext_resource type="Script" path="res://game/Game.gd" id="1_b2lq8"]
+[ext_resource type="PackedScene" uid="uid://dwup1d7y4nf6r" path="res://maps/DressingRoom.tscn" id="2_gjjva"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_b2lq8")
+firstScene = ExtResource("2_gjjva")
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

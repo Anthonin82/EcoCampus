@@ -1,0 +1,56 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.102681, 0.804688, 0.256245, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "portraitStyle"
+},
+"default_portrait": "default",
+"description": "Le personnage qui vous aidera à comprendre le jeu",
+"display_name": "Sonia",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"calm": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/sonia_calm.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"default": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/sonia_smile.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smileEyesClosed": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/sonia_happy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"speak": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/sonia_speak.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

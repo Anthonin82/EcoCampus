@@ -1,0 +1,161 @@
+if {amphi.mcqCompleted} == true:
+	teacherCharacter (smiling): Vous voulez faire le QCM une deuxième fois ?
+	teacherCharacter (default): Cela me fait plaisir, mais malheureusement je n'ai préparé qu'un QCM pour ce cours.\
+N'hésitez pas à aller prendre la parole devant vos camarades pour les sensibiliser sur la transition écologique !
+	[end_timeline]
+label Intro
+teacherCharacter (default): Bonjour, je suis [b]Mme [color=orange]Verdure[/color][/b].\
+Aujourd'hui, nous allons tester vos connaissances sur l'environnement et les pratiques durables. Êtes-vous prêt à [wave][color=gold]relever le défi[/color][/wave] ?
+teacherCharacter (smiling): [wave][color=green]L'écologie[/color][/wave] est un sujet passionnant et essentiel pour notre avenir. Chaque geste compte, et comprendre comment nous pouvons protéger notre planète est la première étape vers un mode de vie plus responsable.
+teacherCharacter (default): Je vais vous poser [b]10 questions à choix multiple[/b]. Ne vous inquiétez pas, c'est un bon moyen d'apprendre tout en s'amusant. Prenez votre temps et réfléchissez bien à chaque réponse.
+teacherCharacter (smiling): Alors, c'est parti,\
+montrez-moi ce que vous savez sur [wave][color=green]l'écologie[/color][/wave] !
+label Question 1
+teacherCharacter (smiling): Première question \: \
+\
+Est-ce que L’effet de serre est une conséquence des activités humaines ?
+- A. VRAI
+- B. FAUX
+	set {amphi.q1} = true
+if {amphi.q1} == true:
+	teacherCharacter (smiling): Bravo, la bonne réponse était effectivement [b]FAUX[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, la bonne réponse était [b]FAUX[/b] !
+teacherCharacter (default): En effet, c'est un phénomène naturel, indispensable à la vie sur Terre. Les activités humaines créent un effet de serre [b]additionnel[/b] qui [color=red][b]déséquilibre[/b][/color] le système climatique.
+label Question 2
+teacherCharacter (smiling): Deuxième question \: \
+\
+Quel secteur émet le plus de gaz à effet de serre dans le monde ?
+- A. Transports
+- B. Agriculture
+- C. Énergie
+	set {amphi.q2} = true
+- D. Industrie
+if {amphi.q2} == true:
+	teacherCharacter (smiling): Bravo, la bonne réponse était effectivement [b]l'Énergie[/b] !
+else:
+	teacherCharacter (disapointed): Et non ! la bonne réponse était [b]l'Énergie[/b].
+teacherCharacter (default): Le secteur de l'énergie est [b]le plus grand émetteur[/b] de gaz à effet de serre, principalement à cause de la production d'électricité à partir de [color=black]charbon[/color], de [color=black]pétrole[/color] et de [color=brown]gaz naturel[/color]. Ces combustibles fossiles sont [color=red]très polluants[/color].
+label Question 3
+teacherCharacter (smiling): Troisième question \:\
+\
+Quel secteur émet le plus de gaz à effet de serre, cette fois-ci en [b]France[/b]?
+- A. Agriculture
+- B. Transports
+	set {amphi.q3} = true
+- C. Énergie
+- D. Bâtiment
+if {amphi.q3} == true:
+	teacherCharacter (default): Bravo, la bonne réponse était effectivement les [b]Transports[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, la bonne réponse était les [b]Transports[/b] !
+teacherCharacter (default): En effet, en [b]France[/b], les transports sont la principale source d'émissions de gaz à effet de serre, notamment à cause de l'utilisation des voitures individuelles et des camions, qui dépendent encore largement des [color=red]carburants fossiles[/color].
+label Question 4
+teacherCharacter (smiling): Quatrième question \:\
+\
+Quelle a été l'augmentation moyenne de la température en France entre 2013 et 2022 ?
+- A. 0,9°C
+- B. 1,9°C
+	set {amphi.q4} = true
+- C. 2,9°C
+- D. 7,9°C
+if {amphi.q4} == true:
+	teacherCharacter (smiling): Exact, la bonne réponse était [b]1,9°C[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, la bonne réponse était [b]1,9°C[/b] !
+teacherCharacter (default): C'est juste ! En moins de dix ans, la température moyenne a augmenté de près de [wave][color=crimson]2°C[/color][/wave] en France, un signe inquiétant du réchauffement climatique. Ces hausses sont déjà visibles à travers des vagues de chaleur plus fréquentes.
+label Question 5
+teacherCharacter (smiling): Cinquième question \:\
+\
+Depuis 2010, combien dénombre-t-on de vagues de chaleur ?
+- A. 4
+- B. 6
+- C. 10
+- D. 23
+	set {amphi.q5} = true
+if {amphi.q5} == true:
+	teacherCharacter (smiling): En effet la bonne réponse était [b]23[/b] !
+else:
+	teacherCharacter (disapointed): Raté ! la bonne réponse était [b]23[/b] !
+teacherCharacter (default): En effet on recense [wave][color=purple]47 vagues[/color][/wave] de chaleur en France depuis 1947. La dernière vague de chaleur recensée officiellement a eu lieu en juillet 2024. Les vagues de chaleur recensées depuis 1947 à l’échelle nationale ont été sensiblement plus nombreuses au cours des dernières décennies.
+label Question 6
+teacherCharacter (default): Sixième question \:\
+\
+Quelle est l’empreinte carbone d'un Français moyen en 2022 (en [b]tonnes[/b]) ?
+- A. 4,8
+- B. 11,3
+- C. 9,2
+	set {amphi.q6} = true
+- D. 1,9
+if {amphi.q6} == true:
+	teacherCharacter (smiling): Bravo, la bonne réponse était effectivement la réponse [b]C[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, la bonne réponse était la [b]C[/b] !
+teacherCharacter (disapointed): L'empreinte carbone moyenne d'un Français en 2022 était de 9,2 tonnes de CO2 par an. C'est encore beaucoup trop si l'on veut atteindre les objectifs de neutralité carbone fixés par l'Accord de Paris.
+label Question 7
+teacherCharacter (smiling): En parlant de l'Accord de Paris...\
+\
+Selon celui-ci, quelle est la limitation de la hausse de température visée pour les prochaines années à venir ?
+- A. 1,5°C
+	set {amphi.q7} = true
+- B. 3,5°C
+- C. 2°C
+- D. 2,5°C
+if {amphi.q7} == true:
+	teacherCharacter (smiling): Félicitations, la bonne réponse était effectivement la réponse [b]A[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, la bonne réponse était la [b]A[/b] !
+teacherCharacter (smiling): Et bien à l'échelle internationale, les négociations entre les Etats aboutissent à des objectifs climatiques de plus en plus ambitieux. Les Etats se sont engagés lors de la COP21 et l'Accord de Paris a maintenir le réchauffement global bien en deçà des 2°C et de continuer les efforts pour le limiter sous les [wave][color=blue]1,5°C[/color][/wave]
+label Question 8
+teacherCharacter (default): Huitième question\: (bientôt terminé)\
+\
+Lequel de ces transports est le moins polluant
+- A. Train
+	set {amphi.q8} = true
+- B. Voiture
+- C. Avion
+if {amphi.q8} == true:
+	teacherCharacter (smiling): La bonne réponse était effectivement le [b]Train[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, c'était le [b]Train[/b] !
+teacherCharacter (smiling): Le train est de loin le moyen de transport le moins polluant, surtout quand il est électrique. Il émet beaucoup moins de CO2 par passager que la voiture ou l'avion !
+label Question 9
+teacherCharacter (default): Neuvième question \:\
+\
+Lequel des ces trajets émet le plus de gaz à effet de serre ?
+- A. Un aller-retour Paris - New York
+	set {amphi.q9} = true
+- B. 2 fois le tour de la Terre en TGV
+if {amphi.q9} == true:
+	teacherCharacter (smiling): Bravo, la bonne réponse était effectivement la réponse [b]A[/b] !
+else:
+	teacherCharacter (disapointed): Dommage, la bonne réponse était la [b]A[/b] !
+teacherCharacter (default): Un aller-retour Paris - New York en avion émet beaucoup plus de gaz à effet de serre qu'un long trajet en TGV, malgré la distance parcourue. [b]L'aviation[/b] est l'un des secteurs les [color=red]plus polluants[/color].
+label Question 10
+teacherCharacter (default): Dixième et dernière question \:\
+\
+Quel pourcentage des déchets ménagers est recyclé en [b]France[/b]
+- A. 8%
+- B. 13%
+- C. 28%
+- D. 43%
+	set {amphi.q10} = true
+if {amphi.q10} == true:
+	teacherCharacter (smiling): Bravo, la bonne réponse était effectivement la réponse [b]D[/b] !
+else:
+	teacherCharacter (disapointed): Malheureusement, la bonne réponse était la [b]D[/b] !
+teacherCharacter (smiling): En 2021, environ [wave][color=gold]43%[/color][/wave] des déchets ménagers en France étaient recyclés. Cela inclut le recyclage des emballages, des papiers, et d'autres déchets triés. Ce chiffre continue de progresser grâce aux efforts de sensibilisation et aux infrastructures de tri et de recyclage disponibles dans tout le pays.
+label Final Mark
+[signal arg="qcm_finished"]
+set {amphi.mcqCompleted} = true
+teacherCharacter (default): Le QCM est à présent terminé !\
+Laissez moi juste quelques secondes pour vérifier vos réponses...
+[wait time="2.0"]
+teacherCharacter (default): C'est bon, j'ai les résultats !
+if {amphi.mcqMark} < 5:
+	teacherCharacter (default): Votre note est de [wave][color=orange]{Dialogic.VAR.amphi.mcqMark}/10[/color][/wave]. \
+Ne te décourage pas ! C'est une occasion de t'améliorer.\
+Si tu souhaites en apprendre d'avantage, n'hésite pas à cliquer sur le [b]'?'[/b] des actions des bilans de chaque lieu.
+else:
+	teacherCharacter (smiling): Bravo votre note est de [wave][color=gold]{Dialogic.VAR.amphi.mcqMark}/10[/color][/wave] ! \
+Cela montre que vous êtes plutôt bien renseigné sur le sujet ! Il ne reste plus qu'à partager vos connaisances avec votre entourage. 😊

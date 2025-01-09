@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://jmkcjflec312"]
+
+[ext_resource type="Script" path="res://inventory/InventoryItem.gd" id="1_3gwnk"]
+[ext_resource type="Script" path="res://inventory/Inventory.gd" id="2_vmblw"]
+
+[resource]
+script = ExtResource("2_vmblw")
+items = Array[ExtResource("1_3gwnk")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+archivedItems = Array[ExtResource("1_3gwnk")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])

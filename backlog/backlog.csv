@@ -1,0 +1,34 @@
+1,En tant que joueur je peux me déplacer
+2,En tant que joueur je peux accéder à la zone de départ (appartement)
+3,En tant que joueur je peux intéragir avec les éléments du décor
+4,En tant que joueur certaines actions que j’effectue valident des missions
+5,En tant que joueur je peux accéder à la zone de ville (avec le choix des transports)
+6,En tant que joueur je peux accéder à la zone du campus : extérieur
+7,En tant que joueur je peux accéder à la zone du campus : salle de cours
+8,"En tant que joueur je peux regarder quelles missions je dois réaliser (mission principale + mission en fonction du lieu, les autres choses à faire sont cachés)"
+9,En tant que joueur je dois valider certaines missions de la zone pour pouvoir en sortir
+10,En tant que joueur je suis fortement incité à effectuer des missions principales
+11,En tant que joueur je dois remplir certains critères pour pouvoir accéder à certains espaces
+12,En tant que joueur je peux parler à des pnjs qui vont donner des indications et conseils
+13,En tant que joueur je visualise mes trois meilleures et pires impacts en quittant chaque zone
+14,"En tant que joueur je peux transporter des objets dans mon inventaire, soit des objets inertes soit avec une capacité spéciale"
+15,En tant que joueur je peux accéder à la zone du campus : RU
+16,En tant que joueur je peux activer certains objets de mon inventaire
+17,En tant que joueur je peux voir un plan d’action personnalisé à la fin de la partie
+18,En tant que joueur je peux voir dans mon bilan personnalisé les actions que je peux réaliser pour baisser mon score carbone et être en accord avec les objectifs climats
+19,En tant que joueur je peux accéder à la zone du campus : O’Tapas
+20,En tant que chercheur je peux accéder à la zone de Biarritz : Batiment de conference
+21,En tant que joueur je peux me connecter avec mon compte professionnel (voir avec M Puzenat et Valentin Famelart)
+22,En tant que joueur je peux voir les autres joueurs en multijoueur (voir avec M Puzenat sur la priorité du multijoueur)
+23,En tant que joueur je peux communiquer avec les autres joueurs dans le jeu
+24,En tant que personne en situation de handicap je peux accéder au jeu
+25,En tant que joueur je peux personnaliser mon avatar
+26,En tant que joueur je peux accéder à la zone de Biarritz : Hotel
+27,En tant que joueur je peux accéder à la zone de Biarritz : Ville
+28,En tant que joueur je peux accéder à la zone de forêt
+29,En tant que joueur je peux sauvegarder ma progression
+30,En tant que chercheur je peux accéder à des données sur le jeu à des fins de recherche et d’évaluation (Voir mardi)
+31,En tant qu’enseignant je peux vérifier qu’un étudiant a bien joué au jeu (voir avec M Puzenat)
+32,En tant que joueur je peux participer à des évenements temporaires en multijoueur
+33,En tant que joueur je peux proposer des idées pour améliorer l’écologie sur le campus
+34,En tant que joueur je peux communiquer avec des pnjs basés sur un LLM (Voir avec M Puzenat et integration du LLM sur un serveur)

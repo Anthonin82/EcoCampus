@@ -1,0 +1,7 @@
+if {bedroom.alreadySlept} == false:
+	Voulez vous dormir ?
+	- Dormir
+		set {bedroom.isSleeping} = true
+	- Continuer
+else:
+	Vous venez de vous réveiller, il est l'heure de prendre le petit déjeuner.

@@ -1,0 +1,7 @@
+do PlayerGlobals.setPlayerAnimation("idle_down")
+soniaCharacter (smileEyesClosed): Bienvenue dans la ville !
+soniaCharacter (speak): L'objectif est à présent de vous rendre au [wave][b][color=gold]Campus Universitaire[/color][/b][/wave] pour assister à vos cours.
+soniaCharacter (speak): Vous disposez d'une [b]voiture[/b], mais aussi d'un [b]vélo[/b]. Il est également possible de s'y rendre à [b]pied[/b] ou en [b]transports en commun[/b].
+soniaCharacter (default): Si jamais vous aviez des trous de mémoire, votre voiture est blanche. [s]Vous pouvez utiliser tous les vélos verts de la ville[/s] (ils sont en libre service). Et il suffit de trouver un arrêt de bus pour pouvoir prendre celui-ci.
+soniaCharacter (smileEyesClosed): Ah oui et le [wave][b][color=gold]Campus[/color][/b][/wave] se situe au [b]Nord-Est[/b] de la ville !
+soniaCharacter (default): Bon courage et bonne journée !

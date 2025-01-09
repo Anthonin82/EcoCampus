@@ -1,0 +1,7 @@
+if {bedroom.alreadyWashed} == false:
+	Voulez vous prendre un bain ?
+	- Prendre un bain
+		set {bedroom.bathOn} = true
+	- Continuer
+else:
+	Vous vous êtes déjà lavé.

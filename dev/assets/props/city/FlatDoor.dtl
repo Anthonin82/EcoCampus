@@ -1,0 +1,7 @@
+if {city.completed} == true:
+	Voulez vous rentrer chez vous ?
+	- Rentrer
+		set {city.flatTeleport} = true
+	- Continuer
+else:
+	Vous ne pouvez pour le moment pas rentrer chez vous, sinon vous allez être en retard au Campus !

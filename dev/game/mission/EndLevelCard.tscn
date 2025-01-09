@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://f277gwdvtfip"]
+
+[ext_resource type="Script" path="res://game/mission/EndLevelCard.gd" id="1_gpqne"]
+
+[node name="EndScreenCard" type="PanelContainer"]
+offset_right = 10.0
+offset_bottom = 10.0
+size_flags_horizontal = 3
+script = ExtResource("1_gpqne")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 2
+
+[node name="Title" type="RichTextLabel" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Titre d'exemple"
+
+[node name="QuestionButton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_type_variation = &"QuestionButton"
+
+[node name="Description" type="RichTextLabel" parent="GridContainer"]
+custom_minimum_size = Vector2(300, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Description de la mission"
+fit_content = true
+
+[node name="GobeletButton" type="Button" parent="GridContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"GobeletButton"
+
+[connection signal="pressed" from="GridContainer/QuestionButton" to="." method="_on_question_button_pressed"]
+[connection signal="pressed" from="GridContainer/GobeletButton" to="." method="_on_turnarround_button_pressed"]

@@ -1,0 +1,18 @@
+Que souhaitez vous faire ?
+- Prendre des affaires
+	- Sac à dos [if PlayerGlobals.getBedroomInfo("closet","backpack") == false][else="disable"]
+		do PlayerGlobals.addClosetChoice("backpack")
+	- Pullover [if  PlayerGlobals.getBedroomInfo("closet","pullover") == false ][else="disable"]
+		do PlayerGlobals.addClosetChoice("pullover")
+	- Casque de vélo [if  PlayerGlobals.getBedroomInfo("closet","helmet") == false ][else="disable"]
+		do PlayerGlobals.addClosetChoice("helmet")
+	- Rien
+- Déposer des affaires
+	- Sac à dos [if PlayerGlobals.getBedroomInfo("closet","backpack") == true][else="disable"]
+		do PlayerGlobals.removeClosetChoice("backpack")
+	- Pullover [if PlayerGlobals.getBedroomInfo("closet","pullover") == true][else="disable"]
+		do PlayerGlobals.removeClosetChoice("pullover")
+	- Casque de vélo [if PlayerGlobals.getBedroomInfo("closet","helmet") == true][else="disable"]
+		do PlayerGlobals.removeClosetChoice("helmet")
+	- Rien
+- Rien

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://qmqdobv6j0hm"]
+
+[ext_resource type="SpriteFrames" uid="uid://d06u60tkr3tf8" path="res://assets/characters/character_generator/male/animatedSprites/animatedSpriteM6.tres" id="1_u32wm"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(0, -16)
+sprite_frames = ExtResource("1_u32wm")
+animation = &"idle_down"
+autoplay = "idle_down"

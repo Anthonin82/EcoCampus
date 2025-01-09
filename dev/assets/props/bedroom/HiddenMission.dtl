@@ -1,0 +1,6 @@
+[wait time="1.0"]
+do PlayerGlobals.setPlayerAnimation("idle_down")
+soniaCharacter (smileEyesClosed): Bien joué ! \
+En baissant ce radiateur, vous venez de réduire votre impact énergétique.
+soniaCharacter (default): On dirait que vous venez de découvrir votre première [wave][b]mission cachée[/b][/wave]!
+soniaCharacter (smileEyesClosed): En effet tous les gestes que vous pouvez faire pour améliorer votre empreinte carbonne ne seront pas obligatoires pour avancer dans le jeu. Alors n'hésitez pas à explorer !

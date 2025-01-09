@@ -1,0 +1,5 @@
+do PlayerGlobals.setPlayerAnimation("idle_down")
+soniaCharacter (smileEyesClosed): Vous voilà à présent sur le [wave][b][color=gold]Campus Universitaire[/color][/b][/wave] !
+soniaCharacter (speak): Un de vos objectifs est maintenant de vous rendre à [wave][b][color=dodgerblue]l'Amphithéâtre[/color][/b][/wave] pour assister à vos cours.
+soniaCharacter (default): Pour repérer [wave][b][color=dodgerblue]l'Amphithéâtre[/color][/b][/wave], pas de panique, c'est le plus gros bâtiment ancien de l'Université ! Celui-ci se trouve au [b]Sud[/b] du [b][color=gold]Campus[/color][/b].
+soniaCharacter (smileEyesClosed): Tâchez de ne pas arriver en retard ! 😊

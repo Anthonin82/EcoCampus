@@ -1,0 +1,47 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0.804688, 0.53672, 0.0901083, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "portraitStyle"
+},
+"default_portrait": "default",
+"description": "La professeur de l'amphithéatre qui vous posera les questions du QCM.",
+"display_name": "Mme Verdure",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/teacher_default.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"disapointed": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/teacher_disapointed.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smiling": {
+"export_overrides": {
+"image": "\"res://ui/dialogue/teacher_smiling.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

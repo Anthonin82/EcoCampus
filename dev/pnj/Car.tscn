@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://cq20ruaaa5edl"]
+
+[ext_resource type="SpriteFrames" uid="uid://djkhynx3jxi48" path="res://pnj/CarBlue.tres" id="1_ic2tj"]
+[ext_resource type="Script" path="res://pnj/Car.gd" id="2_j2yoy"]
+[ext_resource type="Script" path="res://pnj/CarCollisionBody.gd" id="3_3bbx4"]
+[ext_resource type="SpriteFrames" uid="uid://cn0br4yrf2g6b" path="res://pnj/CarGreen.tres" id="3_upt3o"]
+[ext_resource type="Script" path="res://pnj/CarCollisionFront.gd" id="4_ejtit"]
+[ext_resource type="SpriteFrames" uid="uid://cdbcr14f4ppbn" path="res://pnj/CarGrey.tres" id="4_qtkph"]
+[ext_resource type="SpriteFrames" uid="uid://buqdyxnsv0k13" path="res://pnj/CarRed.tres" id="5_1neei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfsur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8pi4"]
+
+[node name="Car" type="AnimatedSprite2D"]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("1_ic2tj")
+animation = &"turn_left_down"
+script = ExtResource("2_j2yoy")
+skins = Array[SpriteFrames]([ExtResource("1_ic2tj"), ExtResource("3_upt3o"), ExtResource("4_qtkph"), ExtResource("5_1neei")])
+metadata/Id = 1
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 4.0
+target_desired_distance = 4.0
+navigation_layers = 2
+
+[node name="FrontArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrontArea"]
+position = Vector2(-90, 10)
+scale = Vector2(1, 3.5)
+shape = SubResource("RectangleShape2D_kfsur")
+script = ExtResource("4_ejtit")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(5, 10)
+scale = Vector2(5.5, 3.5)
+shape = SubResource("RectangleShape2D_a8pi4")
+script = ExtResource("3_3bbx4")
+
+[connection signal="animation_changed" from="." to="." method="_on_animation_changed"]
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
+[connection signal="turnDown" from="." to="FrontArea/CollisionShape2D" method="_on_car_turn_down"]
+[connection signal="turnDown" from="." to="CharacterBody2D/CollisionShape2D" method="_on_car_turn_down"]
+[connection signal="turnLeft" from="." to="FrontArea/CollisionShape2D" method="_on_car_turn_left"]
+[connection signal="turnLeft" from="." to="CharacterBody2D/CollisionShape2D" method="_on_car_turn_left"]
+[connection signal="turnRight" from="." to="FrontArea/CollisionShape2D" method="_on_car_turn_right"]
+[connection signal="turnRight" from="." to="CharacterBody2D/CollisionShape2D" method="_on_car_turn_right"]
+[connection signal="turnUp" from="." to="FrontArea/CollisionShape2D" method="_on_car_turn_up"]
+[connection signal="turnUp" from="." to="CharacterBody2D/CollisionShape2D" method="_on_car_turn_up"]
+[connection signal="area_entered" from="FrontArea" to="." method="_on_front_area_area_entered"]
+[connection signal="area_exited" from="FrontArea" to="." method="_on_front_area_area_exited"]
+[connection signal="body_entered" from="FrontArea" to="." method="_on_front_area_body_entered"]
+[connection signal="body_exited" from="FrontArea" to="." method="_on_front_area_body_exited"]

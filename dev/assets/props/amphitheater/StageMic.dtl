@@ -1,0 +1,16 @@
+if {amphi.speechCompleted} == true:
+	teacherCharacter (smiling): Encore vous ?
+	teacherCharacter (default): Il faut laisser tout le monde parler !
+	[end_timeline]
+label Intro
+do PlayerGlobals.setPlayerAnimation("idle_down")
+teacherCharacter (default): Votre objectif est simple \: [color=gold][b]encourager les autres[/b][/color] à adopter des comportements plus [wave][color=green]responsables[/color][/wave] vis à vis de l'environnement. \
+Ce n'est pas toujours facile de convaincre, mais un bon discours peut avoir un réel impact.
+teacherCharacter: Alors, prenez un moment pour réfléchir à ce que vous souhaitez transmettre à vos proches, camarades ou collègues de travail. \
+\
+[b]Votre voix peut vraiment faire la différence ![/b]
+teacherCharacter (smiling): La parole est à [b]vous[/b] !
+[text_input text="Votre discours:" var="amphi.playerSpeech" placeholder="Bonjour à tous,..."]
+set {amphi.speechCompleted} = true
+teacherCharacter (default): Merci d'avoir pris la parole !
+teacherCharacter (smiling): Grâce à vous, peut-être que certains de vos proches changeront certaines de leurs habitudes au profit de la planète !

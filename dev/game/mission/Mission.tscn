@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cud8hiwna0ddv"]
+
+[ext_resource type="Script" path="res://game/mission/Mission.gd" id="1_dmpjs"]
+
+[node name="Mission" type="PanelContainer"]
+offset_right = 10.0
+offset_bottom = 10.0
+script = ExtResource("1_dmpjs")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2

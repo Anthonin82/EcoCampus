@@ -1,0 +1,8 @@
+if {bedroom.radiatorLessOneDegree} == false:
+	Voulez vous baisser le chauffage d'un degré ?
+	- Baisser le chauffage d'un degré
+		set {bedroom.radiatorLessOneDegree} = true
+		do PlayerGlobals.changeAnyBedroomChoice("electricity", "heater", false)
+	- Continuer
+else:
+	Le radiateur est moins chaud qu'avant

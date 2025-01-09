@@ -1,0 +1,17 @@
+if {bedroom.breakfastMissionCompleted} == false:
+	- Ouvrir
+		[signal arg="open_fridge"]
+		Que voulez vous manger au petit déjeuner ?
+		- Pain beurre confiture, croissant et orange
+			set {bedroom.breakfastChoosen} = "continental"
+		- Toast, oeuf et jambon
+			set {bedroom.breakfastChoosen} = "britannique"
+		- Lait de vache et céréales
+			set {bedroom.breakfastChoosen} = "cow_milk_cereales"
+		- Fruit et céréales
+			set {bedroom.breakfastChoosen} = "vegetalien"
+		- Rien
+		[signal arg="close_fridge"]
+	- Continuer
+else:
+	Vous avez déjà mangé.

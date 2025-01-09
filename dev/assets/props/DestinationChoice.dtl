@@ -1,0 +1,10 @@
+Où souhaitez-vous vous rendre ?
+- {Dialogic.VAR.destinations.destinationA} [if {destinations.destinationA} != ""][else="hide"]
+	set {destinations.choice} = 0
+- {Dialogic.VAR.destinations.destinationB} [if {destinations.destinationB} != ""][else="hide"]
+	set {destinations.choice} = 1
+- {Dialogic.VAR.destinations.destinationC} [if {destinations.destinationC} != ""][else="hide"]
+	set {destinations.choice} = 2
+- {Dialogic.VAR.destinations.destinationD} [if {destinations.destinationD} != ""][else="hide"]
+	set {destinations.choice} = 3
+- Annuler

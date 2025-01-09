@@ -1,0 +1,226 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7agn0dajjmn"]
+
+[ext_resource type="Script" path="res://inventory/InventoryUI.gd" id="1_8rs2i"]
+[ext_resource type="Texture2D" uid="uid://b8fmkdt5pkvho" path="res://assets/inventory/inventory_background.png" id="2_ecg01"]
+[ext_resource type="PackedScene" uid="uid://cn5npjac86fp4" path="res://inventory/InventorySlot.tscn" id="3_nch26"]
+
+[node name="InventoryUi" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_8rs2i")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -665.5
+offset_top = -463.5
+offset_right = 665.5
+offset_bottom = 463.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ecg01")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -629.0
+offset_top = -445.0
+offset_right = 200.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.51313, 1.62439)
+current_tab = 1
+clip_tabs = false
+
+[node name="Archives" type="TabBar" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ArchivedInventory" type="GridContainer" parent="TabContainer/Archives"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -221.5
+offset_right = -98.5
+offset_bottom = -93.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.24775, 3.40502)
+columns = 5
+
+[node name="InventorySlot1" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="TabContainer/Archives/ArchivedInventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="Inventaire" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Inventory" type="GridContainer" parent="TabContainer/Inventaire"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -254.5
+offset_top = -221.5
+offset_right = -98.5
+offset_bottom = -93.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.24775, 3.40502)
+columns = 5
+
+[node name="InventorySlot1" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="TabContainer/Inventaire/Inventory" instance=ExtResource("3_nch26")]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -392.5
+offset_top = 83.5
+offset_right = -299.5
+offset_bottom = 146.5
+grow_horizontal = 0
+text = "Fermer"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

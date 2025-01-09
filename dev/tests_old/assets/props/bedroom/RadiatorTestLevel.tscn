@@ -1,0 +1,105 @@
+[gd_scene load_steps=18 format=3 uid="uid://c01dyvyt8aeef"]
+
+[ext_resource type="PackedScene" uid="uid://bv1p3ho4637q7" path="res://player/Player.tscn" id="1_3wu1r"]
+[ext_resource type="Script" path="res://tests/assets/props/bedroom/RadiatorTestLevel.gd" id="1_xnygn"]
+[ext_resource type="PackedScene" uid="uid://cjfnr1co83ycn" path="res://assets/props/Prop.tscn" id="2_lc6dk"]
+[ext_resource type="Script" path="res://assets/props/bedroom/Radiator.gd" id="3_isgd6"]
+[ext_resource type="Resource" path="res://assets/props/bedroom/Radiator.dtl" id="4_53p7x"]
+[ext_resource type="Shader" path="res://assets/props/interaction/outline.gdshader" id="5_scy50"]
+[ext_resource type="Texture2D" uid="uid://dekyp0soam3k3" path="res://assets/tilesets/interiors/animatedSpritesheets/animated_radiator.png" id="6_uyhw5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_reoo5"]
+resource_local_to_scene = true
+shader = ExtResource("5_scy50")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/width = 0.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ablow"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(0, 0, 29, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cicb"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(29, 0, 29, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyoep"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(58, 0, 29, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgxlh"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(87, 0, 29, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hsce"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(116, 0, 29, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5sfb"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(145, 0, 29, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecnka"]
+atlas = ExtResource("6_uyhw5")
+region = Rect2(174, 0, 29, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6t03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ablow")
+}],
+"loop": true,
+"name": &"off",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ablow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cicb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyoep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgxlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hsce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5sfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecnka")
+}],
+"loop": true,
+"name": &"on",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhxs5"]
+size = Vector2(23, 13)
+
+[node name="RadiatorTestScene" type="Node2D"]
+script = ExtResource("1_xnygn")
+
+[node name="Player" parent="." instance=ExtResource("1_3wu1r")]
+
+[node name="Radiator" parent="." instance=ExtResource("2_lc6dk")]
+position = Vector2(0, -34)
+script = ExtResource("3_isgd6")
+dialogicTimeline = ExtResource("4_53p7x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Radiator"]
+material = SubResource("ShaderMaterial_reoo5")
+sprite_frames = SubResource("SpriteFrames_i6t03")
+animation = &"on"
+autoplay = "on"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Radiator"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radiator/StaticBody2D"]
+position = Vector2(1.5, 5.5)
+shape = SubResource("RectangleShape2D_fhxs5")
